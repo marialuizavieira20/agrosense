@@ -59,7 +59,7 @@ insert into informacao_do_cliente values
 (default,'Sítio Oliveira','1198388831','st.oliveira@gmail.com','Araraquara,SP'),
 (default,'Ferreira´s Agro','1198886611','ferreira.agro@gmail.com','São Carlos,RJ');
 
-insert into informcao_da_plantação values
+insert into informacao_da_plantacao values
 (default,'JBS',5,7500,5000),
 (default,'Raízen',10,15000,10000),
 (default,'Agromania',4,6800,4000),
@@ -75,7 +75,7 @@ insert into dados_do_sensor values
 
 
 -- ----- Script de Query ------
-select *, case
+select id, nome_da_empresa, data_cadastro, sts_plano, case
 when aceite_dos_termos = 1 then 'Aceitou'
 else 'Não aceitou'
 end as termos_de_uso
@@ -88,11 +88,6 @@ else 'UMIDADE ESTÁ NO NÍVEL CORRETO'
 end as status_umidade
 FROM dados_do_sensor;
 
-
 select * from informacao_do_cliente;
 
-select * from infromcao_da_plantacao;
-
-
-
-
+select * from informacao_da_plantacao;
