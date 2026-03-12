@@ -35,14 +35,14 @@
         let perda = ipt_plantio.value * (ipt_producao.value * 0.30) * ipt_morango.value
 
         // economia de 20% no gasto com irrigação (Canal Rural)
-        let novo_gasto_irri = Number(ipt_irrigacao.value) * 0.80; // 0.80 pois os 20% caiu fora com a chegada do agrosense, isso nao ta complexo plmds só pensar
+        let novo_gasto_irrigacao = Number(ipt_irrigacao.value) * 0.80; // 0.80 pois os 20% caiu fora com a chegada do agrosense, isso nao ta complexo plmds só pensar
 
         // 30% a mais de produção com irrigação adequada (Agricultura e Negócio)
         let nova_producao = producao_atual * 1.30
         let nova_receita = ipt_plantio.value * nova_producao * ipt_morango.value
 
         // lucro com o sensor
-        let novo_lucro = nova_receita - novo_gasto_irri
+        let novo_lucro = nova_receita - novo_gasto_irrigacao
         let diferenca = novo_lucro - lucro_atual
 
         dv_msg.innerHTML = `
